@@ -8,10 +8,34 @@
   
   <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; display: none; }
     .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <style>
+    :root {
+      --pale-blue: hsl(225, 100%, 94%);
+      --bright-blue: hsl(245, 75%, 52%);
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+      --primary-0: var(--pale-blue);
+      --primary-1: var(--bright-blue);
+      --neutral-0: var(--very-pale-blue);
+      --neutral-1: var(--desaturated-blue);
+      --neutral-2: var(--dark-blue);
+      --font-size-body: 16px;
+      --font-weight-body: 500;
+    }
+    body {
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: var(--font-size-body);
+      font-weight: var(--font-weight-body);
+    }
   </style>
 </head>
 <body>
