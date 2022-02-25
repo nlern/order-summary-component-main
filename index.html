@@ -62,7 +62,9 @@
         font-family: 'Red Hat Display', sans-serif;
         font-size: var(--font-size-body);
         font-weight: var(--font-weight-body);
-        background: var(--primary-0);
+        background: url('./images/pattern-background-mobile.svg') no-repeat center center fixed;
+        background-size: cover;
+        background-color: var(--primary-0);
       }
       main {
         min-height: 100vh;
@@ -100,6 +102,7 @@
       .btn.primary {
         background: var(--primary-1);
         color: var(--neutral-0);
+        box-shadow: 0 4px 0.8em 0 var(--neutral-1);
       }
       .btn.primary:hover {
         opacity: 0.7;
@@ -169,7 +172,15 @@
         margin-top: 1em;
       }
       .card .content .actions .btn.secondary {
-        margin-top: 0.5em;
+        margin-top: 1em;
+      }
+
+      @media screen and (min-width: 1024px) {
+        body {
+          background: url('./images/pattern-background-desktop.svg') no-repeat
+            fixed;
+          background-color: var(--primary-0);
+        }
       }
     </style>
   </head>
