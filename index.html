@@ -74,18 +74,55 @@
       h1 {
         font-weight: var(--font-weight-heading);
       }
+      a {
+        transition: all 0.25s ease;
+      }
+      a:hover {
+        text-decoration: unset;
+        color: var(--neutral-1);
+      }
+      .btn {
+        background: white;
+        border: unset;
+        display: block;
+        width: 100%;
+        padding: 1em;
+        font-size: 0.8em;
+        font-weight: 700;
+        border-radius: 0.8em;
+        letter-spacing: 0.03em;
+        transition: all 0.25s ease;
+      }
+      .btn:hover {
+        cursor: pointer;
+      }
+      .btn.primary {
+        background: var(--primary-1);
+        color: var(--neutral-0);
+      }
+      .btn.primary:hover {
+        opacity: 0.7;
+      }
+      .btn.secondary {
+        color: var(--neutral-1);
+      }
+      .btn.secondary:hover {
+        color: var(--neutral-2);
+      }
       .card {
         width: 300px;
         text-align: center;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         border-radius: var(--border-radius);
       }
-      .card .poster, .card .poster img {
+      .card .poster,
+      .card .poster img {
         border-top-left-radius: inherit;
         border-top-right-radius: inherit;
       }
       .card .content {
-        padding: 2em;
+        padding: 2em 1em;
+        padding-bottom: 1em;
         background: #fff;
         border-bottom-left-radius: inherit;
         border-bottom-right-radius: inherit;
@@ -95,6 +132,43 @@
         font-size: 0.8em;
         line-height: 1.5em;
         color: var(--neutral-1);
+      }
+      .card .content .details {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--neutral-0);
+        align-items: center;
+        padding: 1em;
+        gap: 1em;
+        border-radius: 0.5em;
+      }
+      .card .content .details img {
+        height: 40px;
+        width: 40px;
+      }
+      .card .content .details .cost {
+        flex: 1 1 auto;
+        text-align: start;
+        font-size: 0.8em;
+      }
+      .card .content .details .cost .name {
+        font-size: inherit;
+        font-weight: var(--font-weight-heading);
+      }
+      .card .content .details .cost .amount {
+        font-size: inherit;
+        color: var(--neutral-1);
+        font-weight: var(--font-weight-subheading);
+      }
+      .card .content .details .link-change {
+        font-size: 0.8em;
+        font-weight: var(--font-weight-subheading);
+      }
+      .card .content .actions {
+        margin-top: 1em;
+      }
+      .card .content .actions .btn.secondary {
+        margin-top: 0.5em;
       }
     </style>
   </head>
@@ -109,16 +183,29 @@
         </figure>
         <section class="content">
           <h1 class="header">Order Summary</h1>
-  
+
           <p class="summary">
             You can now listen to millions of songs, audiobooks, and podcasts on
             any device anywhere you like!
           </p>
-  
-          <div class="details">
 
+          <div class="details">
+            <div class="image">
+              <figure>
+                <img src="./images/icon-music.svg" alt="music" />
+              </figure>
+            </div>
+            <div class="cost">
+              <h2 class="name">Annual Plan</h2>
+              <p class="amount">$59.99/year</p>
+            </div>
+            <a href="#" class="link-change">Change</a>
           </div>
-          Annual Plan $59.99/year Change Proceed to Payment Cancel Order
+
+          <div class="actions">
+            <button class="btn primary">Proceed to Payment</button>
+            <button class="btn secondary">Cancel Order</button>
+          </div>
         </section>
       </article>
     </main>
