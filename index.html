@@ -1,61 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        display: none;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <style>
+      :root {
+        --pale-blue: hsl(225, 100%, 94%);
+        --bright-blue: hsl(245, 75%, 52%);
+        --very-pale-blue: hsl(225, 100%, 98%);
+        --desaturated-blue: hsl(224, 23%, 55%);
+        --dark-blue: hsl(223, 47%, 23%);
+        --primary-0: var(--pale-blue);
+        --primary-1: var(--bright-blue);
+        --neutral-0: var(--very-pale-blue);
+        --neutral-1: var(--desaturated-blue);
+        --neutral-2: var(--dark-blue);
+        --font-size-body: 16px;
+        --font-weight-body: 500;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      body {
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: var(--font-size-body);
+        font-weight: var(--font-weight-body);
+        background: var(--primary-0);
+      }
+      main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        width: 300px;
+        text-align: center;
+      }
+      .card .poster img {
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+      }
+      .card .content {
+        padding: 2em;
+        background: #fff;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <figure class="poster">
+          <img
+            src="./images/illustration-hero.svg"
+            alt="person listening to song on earphones"
+          />
+        </figure>
+        <section class="content">
+          <h1>Order Summary</h1>
   
-  <title>Frontend Mentor | Order summary card</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; display: none; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-  <style>
-    :root {
-      --pale-blue: hsl(225, 100%, 94%);
-      --bright-blue: hsl(245, 75%, 52%);
-      --very-pale-blue: hsl(225, 100%, 98%);
-      --desaturated-blue: hsl(224, 23%, 55%);
-      --dark-blue: hsl(223, 47%, 23%);
-      --primary-0: var(--pale-blue);
-      --primary-1: var(--bright-blue);
-      --neutral-0: var(--very-pale-blue);
-      --neutral-1: var(--desaturated-blue);
-      --neutral-2: var(--dark-blue);
-      --font-size-body: 16px;
-      --font-weight-body: 500;
-    }
-    body {
-      font-family: 'Red Hat Display', sans-serif;
-      font-size: var(--font-size-body);
-      font-weight: var(--font-weight-body);
-    }
-  </style>
-</head>
-<body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
+          <p>
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          Annual Plan $59.99/year Change Proceed to Payment Cancel Order
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
 </html>
