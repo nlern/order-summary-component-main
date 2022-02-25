@@ -45,6 +45,8 @@
         --neutral-2: var(--dark-blue);
         --font-size-body: 16px;
         --font-weight-body: 500;
+        --font-weight-subheading: 700;
+        --font-weight-heading: 900;
         --border-radius: 1em;
       }
       * {
@@ -69,21 +71,30 @@
         justify-content: center;
         align-items: center;
       }
+      h1 {
+        font-weight: var(--font-weight-heading);
+      }
       .card {
         width: 300px;
         text-align: center;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         border-radius: var(--border-radius);
       }
-      .card .poster img {
-        border-top-left-radius: var(--border-radius);
-        border-top-right-radius: var(--border-radius);
+      .card .poster, .card .poster img {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
       }
       .card .content {
         padding: 2em;
         background: #fff;
-        border-bottom-left-radius: var(--border-radius);
-        border-bottom-right-radius: var(--border-radius);
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      .card .content .description {
+        padding: 1em;
+        font-size: 0.8em;
+        line-height: 1.5em;
+        color: var(--neutral-1);
       }
     </style>
   </head>
@@ -97,9 +108,9 @@
           />
         </figure>
         <section class="content">
-          <h1>Order Summary</h1>
+          <h1 class="header">Order Summary</h1>
   
-          <p>
+          <p class="description">
             You can now listen to millions of songs, audiobooks, and podcasts on
             any device anywhere you like!
           </p>
