@@ -45,6 +45,7 @@
         --neutral-2: var(--dark-blue);
         --font-size-body: 16px;
         --font-weight-body: 500;
+        --border-radius: 1em;
       }
       * {
         box-sizing: border-box;
@@ -71,16 +72,18 @@
       .card {
         width: 300px;
         text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border-radius: var(--border-radius);
       }
       .card .poster img {
-        border-top-left-radius: 1em;
-        border-top-right-radius: 1em;
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
       }
       .card .content {
         padding: 2em;
         background: #fff;
-        border-bottom-left-radius: 1em;
-        border-bottom-right-radius: 1em;
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
       }
     </style>
   </head>
